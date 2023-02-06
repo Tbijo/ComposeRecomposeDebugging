@@ -21,6 +21,24 @@ import androidx.compose.ui.unit.dp
 import com.example.composerecomposeviewprep.ui.theme.ComposeRecomposeViewPrepTheme
 import kotlin.random.Random
 
+// check how often do parts of compose UI recompose in Layout Inspector
+// Look under Recomposition Counts - Red color shows recomposition occurrences
+//      - first number means recomposed
+//      - second number means skipped recomposition, because there was no reason to recompose
+// Button will recompose many times because it has a ripple animation.
+
+// Debugging basic code in the Debugger (debug mode and break points)
+// controls explained
+// Step Over - debugger moves to the next line and executes, not jumping into the scope of function
+//              - it will go into the scope of a function when a break point is there
+// Step Into - step into the scope of function that is being executed
+// Force Step Into - steps into functions of libraries (not my code)
+// Step Out - steps out of a function (when do not need to observe it), but finishes executing the function
+// Drop Frame - drops all the variables that a function created and moves back before functions execution
+// Run to Cursor - moves to where the cursor is blinking
+
+// Watches - drag and drop selected variables of statements to see their value
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
